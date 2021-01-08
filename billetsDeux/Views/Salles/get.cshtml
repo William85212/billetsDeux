@@ -1,0 +1,113 @@
+﻿@model IEnumerable<billetsDeux.Models.SalleWeb>
+
+@{
+    ViewData["Title"] = "get";
+}
+
+<div class="container-fluid">
+    <div id="SallesWrapper" class="row">
+        @foreach (SalleWeb item in Model)
+        {
+            <div class="col-sm-6">
+                <div class="SalleInfo">
+                    <a asp-controller="Salles" asp-action="GetId" asp-route-id="@item.Id">
+                        <h3>@item.NomSalle</h3>
+                        <img class="product-image img-fluid img-thumbnail" src="~/photo/photoSalle/@item.ImageSalles" alt="image of @item.ImageSalles" />
+                    </a>
+                </div>
+            </div>
+        }
+    </div>
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+@*<h1>get</h1>
+
+<p>
+    <a asp-action="Create">Create New</a>
+</p>
+<table class="table">
+    <thead>
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.Id)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.NomSalle)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.AdresseSalle)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Capacite)
+            </th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+@foreach (var item in Model) {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.Id)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.NomSalle)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.AdresseSalle)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Capacite)
+            </td>
+            <td>
+                @Html.ActionLink("Edit", "Edit", new { /* id=item.PrimaryKey */ }) |
+                @Html.ActionLink("Details", "Details", new { /* id=item.PrimaryKey */ }) |
+                @Html.ActionLink("Delete", "Delete", new { /* id=item.PrimaryKey */ })
+            </td>
+        </tr>
+}
+    </tbody>
+</table>*@
